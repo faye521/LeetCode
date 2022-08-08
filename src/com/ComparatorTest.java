@@ -20,14 +20,16 @@ public class ComparatorTest {
         //大写字母的优先级是最高的
         list.add("Blexa");
         //构建一个比较器给list排序
-        Comparator<String> comp = new Comparator<String>() {
-            @Override
-            public int compare(String o1, String o2) {
-                return o2.compareTo(o1);
-            }
-        };
+//        Comparator<String> comp = new Comparator<String>() {
+//            @Override
+//            public int compare(String o1, String o2) {
+//                return o2.compareTo(o1);
+//            }
+//        };
         //不添加比较器的话，默认是一个升序排序
-        Collections.sort(list,comp);
+//        Collections.sort(list,comp);
+        //使用lambda 简化比较器
+        Collections.sort(list,(o1,o2)->o2.compareTo(o1));
         System.out.println(list.toString());
         System.out.println("-------------------------------------------------");
         //拥有排序功能的结构才能在初始化的时候传入一个比较器 TreeSet TreeMap
