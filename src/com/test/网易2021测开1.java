@@ -27,7 +27,7 @@ public class 网易2021测开1 {
         // mjkak jm
         //aabbmjk kjmbbaa
         //暴力一下试试
-        //从后往前遍历，找到该点为中心的回文长度
+        //从后往前遍历，找到str末尾最长的回文长度，例如mjkak  找到kak为满足后缀的最长回文子串
         int len=0;
         for(int i=str.length()-1;i>=0;i--){
             len=Math.max(len,huiWenLenth(str,i,i));
