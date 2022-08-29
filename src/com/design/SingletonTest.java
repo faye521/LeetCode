@@ -100,8 +100,14 @@ class Singleton2{
     }
 }
 //双重线程检查的写法
+
+/**
+ * volotaile讲解
+ * https://blog.csdn.net/J169YBZ/article/details/119151121?spm=1001.2101.3001.6661.1&utm_medium=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-119151121-blog-80682208.t5_layer_eslanding_A_0&depth_1-utm_source=distribute.pc_relevant_t0.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-119151121-blog-80682208.t5_layer_eslanding_A_0&utm_relevant_index=1
+ */
 class Singleton3{
-    private static Singleton3 singleton3= null;
+    //添加volatile保证原子操作的可见性
+    private static volatile Singleton3 singleton3= null;
     private Singleton3(){
 
     }
